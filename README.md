@@ -12,3 +12,5 @@ Student login:<br>
 -password1234<br>
 <br>
 you can add teachers,students,persons through admin
+<br>
+Database is in Au.bak below the folders
