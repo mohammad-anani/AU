@@ -5,7 +5,7 @@ Admin login:<br>
 <br>
 Teacher login:<br>
 -username:ali<br>
--password1234<br>
+-password:1234<br>
 <br>
 Student login:<br>
 -username:ali2003<br>
