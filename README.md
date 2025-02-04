@@ -1,14 +1,14 @@
 # AU
-Admin login:
--username:administration
--password1234
-
-Teacher login:
--username:ali
--password1234
-
-Student login:
--username:ali2003
--password1234
-
+Admin login:<br>
+-username:administration<br>
+-password1234<br>
+<br>
+Teacher login:<br>
+-username:ali<br>
+-password1234<br>
+<br>
+Student login:<br>
+-username:ali2003<br>
+-password1234<br>
+<br>
 you can add teachers,students,persons through admin
