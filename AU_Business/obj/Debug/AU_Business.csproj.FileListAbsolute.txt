@@ -1,0 +1,9 @@
+C:\Users\AnaniFamily\source\repos\AU_Business\bin\Debug\AU_Business.dll
+C:\Users\AnaniFamily\source\repos\AU_Business\bin\Debug\AU_Business.pdb
+C:\Users\AnaniFamily\source\repos\AU_Business\bin\Debug\AU_Data.dll
+C:\Users\AnaniFamily\source\repos\AU_Business\bin\Debug\AU_Data.pdb
+C:\Users\AnaniFamily\source\repos\AU_Business\obj\Debug\AU_Business.csproj.AssemblyReference.cache
+C:\Users\AnaniFamily\source\repos\AU_Business\obj\Debug\AU_Business.csproj.CoreCompileInputs.cache
+C:\Users\AnaniFamily\source\repos\AU_Business\obj\Debug\AU_Busin.EC51A7BE.Up2Date
+C:\Users\AnaniFamily\source\repos\AU_Business\obj\Debug\AU_Business.dll
+C:\Users\AnaniFamily\source\repos\AU_Business\obj\Debug\AU_Business.pdb
