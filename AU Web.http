@@ -1,6 +1,0 @@
-@AU_Web_HostAddress = http://localhost:5116
-
-GET {{AU_Web_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
