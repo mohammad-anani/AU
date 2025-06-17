@@ -49,8 +49,20 @@ namespace AU
             }
         }
 
+        void EnsureSettingsFileExists()
+        {
+            string settingsPath = "AU_Settings.txt";
+
+            if (!File.Exists(settingsPath))
+            {
+                File.WriteAllText(settingsPath, "1"); // or "0" as default if Apply should be hidden
+            }
+        }
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            EnsureSettingsFileExists();
             ManageApply();
             SetDeactivationDateForPreDeactivatedApplications();
 
