@@ -55,7 +55,7 @@ namespace AU
 
             if (!File.Exists(settingsPath))
             {
-                File.WriteAllText(settingsPath, "1"); // or "0" as default if Apply should be hidden
+                File.WriteAllText(settingsPath, "11 50 30 10"); // or "0" as default if Apply should be hidden
             }
         }
 
