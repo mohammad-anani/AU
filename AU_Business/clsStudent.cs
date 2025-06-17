@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace AU_Business
 {
+
+    [Serializable]
     public class clsStudent
     {
         public int StudentID { get; set; }

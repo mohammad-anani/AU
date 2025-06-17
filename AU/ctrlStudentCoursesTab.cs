@@ -53,7 +53,7 @@ namespace AU
                 dgvEnnrolledCourses.Columns[2].HeaderText = "Teacher Name";
             }
             
-            dgvscheduledcourses.DataSource = clsScheduledCourse.ListScheduledCoursesForStudent(Student.StudentID,Student.AcademicYear);
+            dgvscheduledcourses.DataSource = clsScheduledCourse.ListScheduledCoursesForStudent(Student.StudentID);
             if (dgvscheduledcourses.Rows.Count > 0)
             {
 

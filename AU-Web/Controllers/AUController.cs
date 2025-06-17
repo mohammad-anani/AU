@@ -1,9 +1,10 @@
 ﻿using AU_Business;
+using AU_Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
+
 using System.Reflection;
 using System.Security.Claims;
 
@@ -133,6 +134,7 @@ namespace AU_Web.Controllers
                 return BadRequest($"Invalid ID:{StudentID}.");
             }
             List<object> sessions = clsUtil.DatatableToList(clsSession.ListSessionsForStudent(StudentID));
+        
             if (sessions.Any())
             {
                 return Ok(sessions);

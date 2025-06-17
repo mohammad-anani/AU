@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\AnaniFamily\\source\\repos\\AU (3)\\AU (3)\\AU_Business\\AU_Business.csproj": {
-                "projectPath": "C:\\Users\\AnaniFamily\\source\\repos\\AU (3)\\AU (3)\\AU_Business\\AU_Business.csproj"
+              "C:\\Users\\AnaniFamily\\source\\repos\\AU (3)\\AU_Business\\AU_Business.csproj": {
+                "projectPath": "C:\\Users\\AnaniFamily\\source\\repos\\AU (3)\\AU_Business\\AU_Business.csproj"
               }
             }
           }
@@ -58,6 +58,14 @@
               "target": "Package",
               "version": "[14.4.0, )"
             },
+            "Magick.NET.Core": {
+              "target": "Package",
+              "version": "[14.4.0, )"
+            },
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
@@ -73,6 +81,14 @@
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.9.0, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Xml.Linq": {
+              "target": "Package",
+              "version": "[3.5.21022.801, )"
             }
           },
           "imports": [
@@ -96,6 +112,42 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\Users\\AnaniFamily\\source\\repos\\AU (3)\\AU_Business\\AU_Business.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\AnaniFamily\\source\\repos\\AU (3)\\AU_Business\\AU_Business.csproj",
+        "projectName": "AU_Business",
+        "projectPath": "C:\\Users\\AnaniFamily\\source\\repos\\AU (3)\\AU_Business\\AU_Business.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\AnaniFamily\\source\\repos\\AU (3)\\AU_Data\\AU_Data.csproj": {
+                "projectPath": "C:\\Users\\AnaniFamily\\source\\repos\\AU (3)\\AU_Data\\AU_Data.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\AnaniFamily\\source\\repos\\AU (3)\\AU_Data\\AU_Data.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\AnaniFamily\\source\\repos\\AU (3)\\AU_Data\\AU_Data.csproj",
+        "projectName": "AU_Data",
+        "projectPath": "C:\\Users\\AnaniFamily\\source\\repos\\AU (3)\\AU_Data\\AU_Data.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
       }
     }
   }

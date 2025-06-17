@@ -26,9 +26,9 @@ namespace AU_Business
 
         public bool IsOpen { get; set; }
 
-        public enum enMode { Add,Update}
+        public enum enEmailMode { Add,Update}
 
-        public enMode Mode { get; set; }
+        public enEmailMode Mode { get; set; }
 
         public clsEmail()
         {
@@ -40,7 +40,7 @@ namespace AU_Business
             this.IsOpen = false;
             this.FromPerson=new clsPerson();
             this.ToPerson=new clsPerson();
-            this.Mode=enMode.Add;
+            this.Mode=enEmailMode.Add;
         }
 
         private clsEmail(int  emailID,int frompersonid,int topersonid,string title,string body,bool isopen)
@@ -53,7 +53,7 @@ namespace AU_Business
             this.IsOpen = isopen;
             FromPerson=clsPerson.Find(frompersonid);
             ToPerson=clsPerson.Find(topersonid);
-            this.Mode = enMode.Update;
+            this.Mode = enEmailMode.Update;
 
         }
 
@@ -66,6 +66,12 @@ namespace AU_Business
         {
             return clsEmailData.GetReceivedEmailsList(personid);
         }
+
+        public static DataTable ListUnopenedEmails(int personid)
+        {
+            return clsEmailData.GetUnopenedEmailsList(personid);
+        }
+
 
         private bool _SendEmail()
         {
@@ -81,15 +87,15 @@ namespace AU_Business
 
         public bool Save()
         {
-            if(this.Mode == enMode.Add)
+            if(this.Mode == enEmailMode.Add)
             {
                 if(this._SendEmail())
                 {
-                    this.Mode= enMode.Update;
+                    this.Mode= enEmailMode.Update;
                     return true;
                 }   
             }
-            else if (this.Mode == enMode.Update)
+            else if (this.Mode == enEmailMode.Update)
             {
                 return this._UpdateEmail();
             }

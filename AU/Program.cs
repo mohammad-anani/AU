@@ -16,6 +16,7 @@ namespace AU
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            AU_Business.GenerateDB.generatedb();
             Application.Run(new frmLogin());
         }
     }

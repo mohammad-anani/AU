@@ -1,7 +1,9 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Dynamic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -24,8 +26,10 @@ namespace AU_Business
 
                 foreach (DataColumn column in dt.Columns)
                 {
-                 
-                    expandoDict[column.ColumnName] = row[column];
+                    if (column.ColumnName == "ImagePath")
+                        expandoDict[column.ColumnName] = SaveToWebDirectory(row[column] as string, "News");
+                    else
+                        expandoDict[column.ColumnName] = row[column];
                 }
 
                 list.Add(expando);
@@ -34,6 +38,18 @@ namespace AU_Business
             return list;
         }
 
+
+        public static string SaveToWebDirectory(string filepath, string folder)
+        {
+
+            if (!File.Exists(filepath))
+            {
+                return "null";
+            }
+            string filename = Path.GetFileNameWithoutExtension(filepath);
+        
+            return filename + ".svg";
+        }
 
     }
 }

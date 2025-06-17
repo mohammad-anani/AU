@@ -12,6 +12,8 @@ namespace AU_Data
     internal class clsDataSettings
     {
         public static string ConnectionString = "server=.;database=AU;trusted_connection=true";
+        public static string ConnectionStringMaster = "server=.;database=master;trusted_connection=true";
+
 
         public static int GetRowsCount(string tablename)
         {

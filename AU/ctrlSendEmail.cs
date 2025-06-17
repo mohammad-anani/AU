@@ -103,12 +103,12 @@ namespace AU
             }
 
     
-            if(Email.Mode==clsEmail.enMode.Add)
+            if(Email.Mode==clsEmail.enEmailMode.Add)
             {
                 SendEmail();
                 
             }
-            else if(Email.Mode==clsEmail.enMode.Update)
+            else if(Email.Mode==clsEmail.enEmailMode.Update)
             {
                 UpdateEmail();
             }

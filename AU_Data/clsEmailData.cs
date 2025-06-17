@@ -69,6 +69,33 @@ namespace AU_Data
             return dtEmails;
         }
 
+        public static DataTable GetUnopenedEmailsList(int personid)
+        {
+            SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
+
+            string query = "Select emailsview.* from EmailsView join emails on emailsview.emailid=emails.emailid where emails.to_personid=" + personid +" and emails.IsOpen=0";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            DataTable dtEmails = new DataTable();
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    dtEmails.Load(reader);
+                }
+                reader.Close();
+            }
+
+            finally { connection.Close(); }
+
+            return dtEmails;
+        }
 
         public static int SendEmail(int frompersonid, int topersonid, string title, string body)
         {

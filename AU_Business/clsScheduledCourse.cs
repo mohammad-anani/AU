@@ -65,9 +65,9 @@ namespace AU_Business
             return clsScheduledCourseData.ListScheduledCoursesForTeacher(teacherid);
         }
 
-        public static DataTable ListScheduledCoursesForStudent(int studentid,int year)
+        public static DataTable ListScheduledCoursesForStudent(int studentid)
         {
-            return clsScheduledCourseData.ListScheduledCoursesForStudent(studentid,year);
+            return clsScheduledCourseData.ListScheduledCoursesForStudent(studentid);
         }
 
         public bool ScheduleCourse()

@@ -46,7 +46,7 @@ namespace AU_Data
             return dtScheduledCourses;
         }
 
-        public static DataTable ListScheduledCoursesForStudent(int studentid,int year)
+        public static DataTable ListScheduledCoursesForStudent(int studentid)
         {
             SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
 
@@ -59,14 +59,14 @@ namespace AU_Data
                 " join MajorCourses on Courses.CourseID=MajorCourses.CourseID\r\n" +
                 "  left join EnrolledCourses on EnrolledCourses.ScheduledCourseID=ScheduledCourses.ScheduledCourseID\r\n " +
                 " left join students on Students.StudentID=EnrolledCourses.StudentID\r\nwhere " +
-                "(MajorCourses.EnrollmentYear=@year and ScheduledCourses.Status=1)\r\nor(MajorCourses.EnrollmentYear<@year" +
+                "(MajorCourses.EnrollmentYear=Students.AcademicYear and ScheduledCourses.Status=1)\r\nor(MajorCourses.EnrollmentYear<Students.AcademicYear" +
                 " and Courses.CourseID in (select ScheduledCourses.CourseID from EnrolledCourses join ScheduledCourses\r\non" +
                 " EnrolledCourses.ScheduledCourseID=ScheduledCourses.ScheduledCourseID\r\nwhere EnrolledCourses.StudentID=@studentid" +
                 " and grade<50) and ScheduledCourses.Status=1)";
 
             SqlCommand cmd = new SqlCommand(query, connection);
 
-            cmd.Parameters.AddWithValue("@year", year);
+            
             cmd.Parameters.AddWithValue("@studentid", studentid);
 
             DataTable dtScheduledCourses = new DataTable();
